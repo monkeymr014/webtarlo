@@ -9,7 +9,6 @@
       <div class="block" id="blu" >
         <router-view/>
       </div>
-
     </div>
   </div>
 </template>
@@ -28,12 +27,8 @@ export default {
 <style lang="scss">
 
 /* MOBILE */
-#blue{
-  background-color:rgb(0, 119, 255);
-}
-#red{
-  background-color:rgb(162, 0, 255);
-}
+
+
 #app{
       padding: 0;
       margin: 0;
@@ -44,7 +39,6 @@ export default {
       margin: 0;
       padding: 0;
       position: fixed;
-      background-color:red;
       width: 100%;
       height:  96px;
       z-index: 99;
@@ -58,7 +52,6 @@ export default {
       width: calc(100% - 8px) ;
       border:solid;
       border-color:rebeccapurple;
-      background-color: rosybrown;
     }
   .block {
   height:  calc(100vh - 96px) ;

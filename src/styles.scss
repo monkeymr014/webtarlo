@@ -1,34 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da|Dekko|Eater|Englebert|Finger+Paint|Kosugi|Lacquer|Nosifer|Slackey&display=swap');
 body {
-
-
+    $mobileMin: 0px;
+    $mobileMax: 480px;
+    $tablesMin: 481px;
+    $tablesMax: 768px;
+    $laptopMin: 769px;
+    $laptopMax: 1024px;
+    $deskopMin: 1025px;
+    $deskopMax: 5200px;
     /* MOBILE */
-    @media (max-width: 1024px) {
-        background: black;
-        background-size: 100%; 
+    @media (max-width: $laptopMax) {
+        .deskop {
+            display: none;
+        }
+        background: white;
+        background-size: 100%;
         display: block;
         display: block;
         margin: 0;
         padding: 0;
         height: 100%;
-
     }
     /* DESKOP */
     @media (min-width: 1024px) {
-        background: black;
+        .mobile {
+            display: none;
+        }
+        background: red;
         background-size: 100%;
         display: block;
         margin: 0;
         padding: 0;
         height: 100%;
     }
-
-
-
-
 }
-
-
-
-
-
