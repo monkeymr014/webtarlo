@@ -1,7 +1,7 @@
 <template>
-  <div class="block" id="home">
+  <div>
     <div class="mobile" >
-      <Mobile msg="Tarło" />
+      <Mobile/>
     </div>
     <div class="deskop" >
       <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -25,8 +25,5 @@ export default {
 }
 </script>
 <style lang="scss">
-
- 
-
 
 </style>

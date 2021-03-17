@@ -16,11 +16,12 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes,
     scrollBehavior(to, from, savedPosition) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve({ x: 0, y: 0 })
-            }, 500)
-        })
+        if (to.hash) {
+            return {
+                selector: to.hash,
+                offset: { x: 0, y: 96 }
+            }
+        }
     }
 })
 

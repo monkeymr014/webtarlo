@@ -1,13 +1,25 @@
 <template>
-  <div>
-    <h1>{{ msg }}</h1>
-    <p>aaa</p>
-     <p>aaa</p>
+  <div  >
+    <div id="home" data-aos="fade-up"   >
+      <MobHome/>
+    </div>
+     <div id="info" data-aos="fade-up" >
+      <MobInfo/>
+    </div>
+    <div id="zespol"  data-aos="fade-up" >
+      <MobCrew/>
+    </div>
+    <div id="c" >
+      <p>sss</p>
+    </div>
    </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import MobHome from '@/components/MobHome.vue'
+import MobInfo from '@/components/MobInfo.vue'
+import MobCrew from '@/components/MobCrew.vue'
+import 'aos/dist/aos.css'
 
 export default {
   name: 'Mobile',
@@ -15,26 +27,19 @@ export default {
     msg: String
   },
    components: {
-    HelloWorld
+    MobHome,
+    MobInfo,
+    MobCrew
     
   }
 }
 </script>
 
+<style  lang="scss">
 
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+ div{ 
+    height: calc(100vh - 96px) ;
+    margin:0;    
+    padding: 0;
+ }
 </style>

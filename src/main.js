@@ -2,12 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import './styles.scss'
+
+import AOS from 'aos'
 
 
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  render: h => h(App)
+    created() {
+        AOS.init()
+    },
+    router,
+    render: h => h(App)
 }).$mount('#app')

@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo+Da|Dekko|Eater|Englebert|Finger+Paint|Kosugi|Lacquer|Nosifer|Slackey&display=swap');
+@import url('http://fonts.googleapis.com/css?family=Tillana&subset=latin,latin-ext');
 body {
+    /* Size */
     $mobileMin: 0px;
     $mobileMax: 480px;
     $tablesMin: 481px;
@@ -8,18 +9,20 @@ body {
     $laptopMax: 1024px;
     $deskopMin: 1025px;
     $deskopMax: 5200px;
+    /*Coros*/
+    $greenDark: #263238;
     /* MOBILE */
     @media (max-width: $laptopMax) {
         .deskop {
             display: none;
         }
-        background: white;
         background-size: 100%;
-        display: block;
         display: block;
         margin: 0;
         padding: 0;
         height: 100%;
+        font-family: 'DryTransferFolio-Caps',
+        sans-serif;
     }
     /* DESKOP */
     @media (min-width: 1024px) {
@@ -33,4 +36,9 @@ body {
         padding: 0;
         height: 100%;
     }
+}
+
+@font-face {
+    font-family: 'DryTransferFolio-Caps';
+    src: url('./assets/DryTransfer Folio Caps2.ttf');
 }
