@@ -1,17 +1,11 @@
 <template>
   <div id="app" >
-    
     <div id="nav">
-      <Bubble :closeOnNavigation="true" >
-        <router-link class="link" to="/#home"><span>Home</span></router-link>
-        <router-link  class="link" to="/#info"><span>O Nas</span></router-link>
-        <router-link  class="link" to="/#zespol"><span>Zespół</span></router-link>
-        <router-link  class="link" to="/#concerts"><span>Koncerty</span></router-link>
-        <router-link  class="link" to="/#music"><span>Rzuć Uchem</span></router-link>
-        <router-link  class="link" to="/#gallery"><span>Rzuć Okiem</span></router-link>
-        <router-link  class="link" to="/#contact"><span>Kontakt</span></router-link>
-        <router-link  class="link" to="/#rider"><span>Rider</span></router-link>
-      </Bubble>
+      <button class="hamburger" aria-label="Menu"  v-bind:class='{"hamburger--active" : isActive}' v-on:click="isActive = !isActive"  > 
+	      <span class="hamburger__container" tabindex="-1"> 
+    	    <span class="hamburger__bars"></span> 
+  	    </span> 
+      </button>
       <h1>Tarło</h1>
       <div id="ytlogo" data-aos="fade-down-left"  >
         <a href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg" target="_blank" >
@@ -19,6 +13,20 @@
         </a>
       </div>    
     </div>
+    <transition name="slide-fade">
+      <div v-if="isActive" class="box">
+        <div class="box_content" >
+          <router-link to="/#home"><span v-on:click="isActive = !isActive" >Home</span></router-link><hr/>
+          <router-link to="/#info"><span v-on:click="isActive = !isActive"  >O Nas</span></router-link><hr/>
+          <router-link to="/#zespol"><span v-on:click="isActive = !isActive"  >Zespół</span></router-link><hr/>
+          <router-link to="/#concerts"><span v-on:click="isActive = !isActive"  >Koncerty</span></router-link><hr/>
+          <router-link to="/#music"><span v-on:click="isActive = !isActive"  >Rzuć Uchem</span></router-link><hr/>
+          <router-link to="/#gallery"><span v-on:click="isActive = !isActive"  >Rzuć Okiem</span></router-link><hr/>
+          <router-link to="/#contact"><span v-on:click="isActive = !isActive"  >Kontakt</span></router-link><hr/>
+          <router-link to="/#rider"><span v-on:click="isActive = !isActive"  >Rider</span></router-link><hr/>
+        </div>
+      </div>
+    </transition>
     <div id="content" >
       <div>
         <router-view/>
@@ -29,26 +37,32 @@
 
 <script>
 import './styles.scss'
-import { Bubble } from 'vue-burger-menu'  
 
 export default {
-  components: {
-    Bubble 
+     data() {
+    return{
+      isActive: false
+    }
+  },
+  mounted(){
+    this.showToggle()
+  },
+  methods:{
+    showToggle(){
+      setTimeout(() =>{
+          this.show = false;
+      },11000);
+    }
+    
   }
 }
+
 </script>
 
 
 <style lang="scss">
 
 /* MOBILE */
-a.link.router-link-active.router-link-exact-active ,a.link{
-
-  padding:5%;
-  text-align: center;
-  left:20%;
-  top:20px;  
-}
 
 h1 {
   text-align: center;
@@ -93,6 +107,7 @@ img, a {
     }
 
 #content {
+  
       float: left;
       margin-top:96px;
       padding: 0;
@@ -100,71 +115,122 @@ img, a {
     }
 
 //Burger
-.bm-burger-button {
-      position: fixed;
-      width: 36px;
-      height: 30px;
-      left: 36px;
-      top: 36px;
-      cursor: pointer;
+
+.hamburger {
+  margin: 36px;
+  z-index:9999;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: not-allowed;
+  &:focus {
+    & > .hamburger__container {
+      box-shadow: 0 0 3px 2px #51a7e8;
     }
-    .bm-burger-bars {
-      background-color: white;
-    }
-    .line-style {
-      position: absolute;
-      height: 20%;
-      left: 0;
-      right: 0;
-    }
-    .cross-style {
-      position: absolute;
-      top: 12px;
-      right: 2px;
-      cursor: pointer;
-    }
-    .bm-cross {
-      background: white;
-    }
-    .bm-cross-button {
-      height: 24px;
-      width: 24px;
-    }
-    .bm-menu {
-      height: 100%; /* 100% Full-height */
-      width: 0; /* 0 width - change this with JavaScript */
-      position: fixed; /* Stay in place */
-      z-index: 1000; /* Stay on top */
+  }
+}
+.hamburger__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 40px;
+  text-decoration: none;
+  
+  height: 30px;
+    z-index:9999;
+    
+}
+.hamburger__bars {
+  text-decoration: none;
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color:white;
+  transition: transform 220ms ease-in-out;
+  &:before, &:after {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color:white;
+    content: '';
+  }
+  &:before {
+    top: -12px;
+    transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
+  }
+  &:after {
+    bottom: -12px;
+    transition: bottom 100ms 250ms ease-in, 
+      transform 220ms ease-in-out;
+  }
+}
+.hamburger--active {
+  .hamburger__bars {
+    transform: rotate(225deg);
+    transition: transform 220ms 120ms ease-in-out;
+    &:before {
       top: 0;
-      left: 0;
-      background-color: #424242; /* Black*/
-      overflow-x: hidden; /* Disable horizontal scroll */
-      padding-top: 0px; /* Place content 60px from the top */
-      transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+      transition: top 100ms ease-out;
     }
+    &:after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 100ms ease-out, 
+        transform 220ms 120ms ease-in-out;
+    }
+  }
+}
+.hamburger, .hamburger__container {
+  &:focus {
+    outline: none;
+  }
+}
 
-    .bm-overlay {
-      background: white;
+//box
+.box {
+  background: black;
 
-    }
-    .bm-item-list {
-      font-color: white;
-      font-size: 30px;
-      padding:0;
-      text-decoration: none;
-    }
-    .bm-item-list > * {
-      display: flex;
-      text-decoration: none;
-      padding: 0.7em;
-    }
-    .bm-item-list > * > span {
-     margin:0;
-     padding:0;
-      color: white;
-    }
-
-
+  position: fixed;
+  top: 96px;
+  transition: transform 0.4s;
+  width: 100%;
+  height: calc(100vh - 96px) ;
+  z-index: 1;
+  padding-top:6%;
+  
+}
+.box_content a{
+  top:0;
+  height: 70%  ;
+  padding:0;
+  text-align: center;
+  font-size:20px;
+  color:white;
+text-decoration: none;
+display:list-item;
+cursor: not-allowed;
+margin:0;
+ 
+}
+hr {
+   width: 80%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+   
+}
+.slide-fade-enter-active {
+  transition: all .8s ease;
+}
+.slide-fade-leave-active {
+  transition: all .6s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
 //yt animacja
 
 .heartbeat {

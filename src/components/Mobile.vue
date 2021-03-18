@@ -1,5 +1,6 @@
 <template>
   <div  >
+  
     <div id="home" data-aos="fade-up"   >
       <MobHome/>
     </div>
@@ -58,11 +59,12 @@ export default {
 }
 </script>
 
-<style  lang="scss">
+<style scoped lang="scss">
 
 div { 
   height: calc(100vh - 96px) ;
   margin:0;    
   padding: 0;
  }
+ 
 </style>
