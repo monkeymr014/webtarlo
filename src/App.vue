@@ -1,15 +1,16 @@
 <template>
   <div id="app" >
+    
     <div id="nav">
       <Bubble :closeOnNavigation="true" >
-        <router-link to="/#home"><span>Home</span></router-link>
-        <router-link to="/#info"><span>O Nas</span></router-link>
-        <router-link to="/#zespol"><span>Zespół</span></router-link>
-        <router-link to="/#concerts"><span>Koncerty</span></router-link>
-        <router-link to="/#music"><span>Rzuć Uchem</span></router-link>
-        <router-link to="/#gallery"><span>Rzuć Okiem</span></router-link>
-        <router-link to="/#dowload"><span>Prasa i Rider</span></router-link>
-        <router-link to="/contact"><span>Kontakt</span></router-link>
+        <router-link class="link" to="/#home"><span>Home</span></router-link>
+        <router-link  class="link" to="/#info"><span>O Nas</span></router-link>
+        <router-link  class="link" to="/#zespol"><span>Zespół</span></router-link>
+        <router-link  class="link" to="/#concerts"><span>Koncerty</span></router-link>
+        <router-link  class="link" to="/#music"><span>Rzuć Uchem</span></router-link>
+        <router-link  class="link" to="/#gallery"><span>Rzuć Okiem</span></router-link>
+        <router-link  class="link" to="/#contact"><span>Kontakt</span></router-link>
+        <router-link  class="link" to="/#rider"><span>Rider</span></router-link>
       </Bubble>
       <h1>Tarło</h1>
       <div id="ytlogo" data-aos="fade-down-left"  >
@@ -18,7 +19,7 @@
         </a>
       </div>    
     </div>
-    <div id="content"  >
+    <div id="content" >
       <div>
         <router-view/>
       </div>
@@ -41,6 +42,14 @@ export default {
 <style lang="scss">
 
 /* MOBILE */
+a.link.router-link-active.router-link-exact-active ,a.link{
+
+  padding:5%;
+  text-align: center;
+  left:20%;
+  top:20px;  
+}
+
 h1 {
   text-align: center;
   font-size:60px;
@@ -100,7 +109,7 @@ img, a {
       cursor: pointer;
     }
     .bm-burger-bars {
-      background-color: #CFD8DC;
+      background-color: white;
     }
     .line-style {
       position: absolute;
@@ -130,17 +139,18 @@ img, a {
       left: 0;
       background-color: #424242; /* Black*/
       overflow-x: hidden; /* Disable horizontal scroll */
-      padding-top: 60px; /* Place content 60px from the top */
+      padding-top: 0px; /* Place content 60px from the top */
       transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
     }
 
     .bm-overlay {
-      background: #424242;
+      background: white;
+
     }
     .bm-item-list {
       font-color: white;
-      margin-left: 10%;
-      font-size: 50px;
+      font-size: 30px;
+      padding:0;
       text-decoration: none;
     }
     .bm-item-list > * {
@@ -149,8 +159,8 @@ img, a {
       padding: 0.7em;
     }
     .bm-item-list > * > span {
-      margin-left: 10px;
-      font-weight: 700;
+     margin:0;
+     padding:0;
       color: white;
     }
 

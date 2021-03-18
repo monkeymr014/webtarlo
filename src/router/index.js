@@ -19,7 +19,7 @@ const router = new VueRouter({
         if (to.hash) {
             return {
                 selector: to.hash,
-                offset: { x: 0, y: 96 }
+                offset: { x: 0, y: 196 }
             }
         }
     }

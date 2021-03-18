@@ -1,16 +1,6 @@
 <template>
   <div>
     <h1>Zespół</h1>
-    <div class="grid-container">
-      <div @click="wojtekRaid = !wojtekRaid"  class="Wojtek">
-      <h2> <transition name="slide-fade">
-    <p v-if="wojtekRaid">hello</p>
-  </transition>Wojtek</h2></div>
-
-      <div @mouseover="rafalRaid = true" @mouseleave="rafalRaid = false" :class="{hovering: rafalRaid}"  class="Rafał"><h2>Rafał</h2></div>
-      <div @mouseover="bartekRaid = true" @mouseleave="bartekRaid = false" :class="{hovering: bartekRaid}"  class="Bartek"><h2>Bartek</h2></div>
-      <div @mouseover="sebaRaid = true" @mouseleave="sebaRaid = false" :class="{hovering: sebaRaid}"  class="Seba"><h2>Sebastian</h2></div>
-      <div @mouseover="michalRaid = true" @mouseleave="michalRaid = false" :class="{hovering: michalRaid}" class="Michał"><h2>Michał</h2></div>
     </div>
    
   </div>
