@@ -9,7 +9,7 @@
       <h1>Tarło</h1>
       <div id="ytlogo" data-aos="fade-down-left"  >
         <a href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg" target="_blank" >
-          <img class="heartbeat" alt="tarlo" src="./assets/yttop.png" />
+          <img class="heartbeat" alt="tarlo" src="./assets/media/yttop.png" />
         </a>
       </div>    
     </div>
@@ -17,13 +17,24 @@
       <div v-if="isActive" class="box">
         <div class="box_content" >
           <router-link to="/#home"><span v-on:click="isActive = !isActive" >Home</span></router-link><hr/>
-          <router-link to="/#info"><span v-on:click="isActive = !isActive"  >O Nas</span></router-link><hr/>
-          <router-link to="/#zespol"><span v-on:click="isActive = !isActive"  >Zespół</span></router-link><hr/>
-          <router-link to="/#concerts"><span v-on:click="isActive = !isActive"  >Koncerty</span></router-link><hr/>
-          <router-link to="/#music"><span v-on:click="isActive = !isActive"  >Rzuć Uchem</span></router-link><hr/>
-          <router-link to="/#gallery"><span v-on:click="isActive = !isActive"  >Rzuć Okiem</span></router-link><hr/>
-          <router-link to="/#contact"><span v-on:click="isActive = !isActive"  >Kontakt</span></router-link><hr/>
-          <router-link to="/#rider"><span v-on:click="isActive = !isActive"  >Rider</span></router-link><hr/>
+          <router-link to="/#info"><span v-on:click="isActive = !isActive" >O Nas</span></router-link><hr/>
+          <router-link to="/#zespol"><span v-on:click="isActive = !isActive" >Zespół</span></router-link><hr/>
+          <router-link to="/#concerts"><span v-on:click="isActive = !isActive" >Koncerty</span></router-link><hr/>
+          <router-link to="/#music"><span v-on:click="isActive = !isActive" >Rzuć Uchem</span></router-link><hr/>
+          <router-link to="/#gallery"><span v-on:click="isActive = !isActive" >Rzuć Okiem</span></router-link><hr/>
+          <router-link to="/#contact"><span v-on:click="isActive = !isActive" >Kontakt</span></router-link><hr/>
+          <router-link to="/#rider"><span v-on:click="isActive = !isActive" >Rider</span></router-link><hr/>
+        </div>
+        <div class="box_media">
+          <a href="https://www.facebook.com/tarlorockband/" target="_blank" >
+            <img class="box_media_item" alt="tarło" src="./assets/media/fb.png" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg" target="_blank" >
+            <img class="box_media_item" alt="tarło" src="./assets/media/yt.png" />
+          </a>
+          <a href="https://www.instagram.com/tarlo_rockband/" target="_blank" >
+            <img class="box_media_item" alt="tarło" src="./assets/media/insta.png" />
+          </a>
         </div>
       </div>
     </transition>
@@ -42,20 +53,9 @@ export default {
      data() {
     return{
       isActive: false
+      }
     }
-  },
-  mounted(){
-    this.showToggle()
-  },
-  methods:{
-    showToggle(){
-      setTimeout(() =>{
-          this.show = false;
-      },11000);
-    }
-    
-  }
-}
+  }   
 
 </script>
 
@@ -63,7 +63,6 @@ export default {
 <style lang="scss">
 
 /* MOBILE */
-
 h1 {
   text-align: center;
   font-size:60px;
@@ -75,7 +74,7 @@ h1 {
   transform: translate(-50%, -50%);
   }
 
-#ytlogo{
+#ytlogo {
   position:fixed;
   left:80%;
   height: 7%;
@@ -89,29 +88,28 @@ img, a {
   height: 100%;
 }
 
-#app{
-      padding: 0;
-      margin: 0;
-      height: 100%;
-    }
+#app {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
 
 #nav {
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      width: 100%;
-      height:  96px;
-      z-index: 99;
-      background:#1F1F1F;
-      top:0;
-    }
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  height:  96px;
+  z-index: 99;
+  background:#1F1F1F;
+  top:0;
+}
 
-#content {
-  
-      float: left;
-      margin-top:96px;
-      padding: 0;
-      width: calc(100% - 0px) ;
+#content {  
+  float: left;
+  margin-top:96px;
+  padding: 0;
+  width: calc(100% - 0px) ;
     }
 
 //Burger
@@ -189,8 +187,7 @@ img, a {
 
 //box
 .box {
-  background: black;
-
+  background: #1F1F1F;
   position: fixed;
   top: 96px;
   transition: transform 0.4s;
@@ -205,22 +202,43 @@ img, a {
   height: 70%  ;
   padding:0;
   text-align: center;
-  font-size:20px;
+  font-size:24px;
   color:white;
-text-decoration: none;
-display:list-item;
-cursor: not-allowed;
-margin:0;
+  text-decoration: none;
+  display:list-item;
+  cursor: not-allowed;
+  margin:0;
  
 }
-hr {
-   width: 80%;
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-   
+
+.box hr {
+  width: 80%;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
 }
+
+.box_media {
+  position: absolute;
+  text-align: center;
+  clear: both;
+  bottom:3vh;
+  width:100%;
+  height:auto;
+  
+}
+
+.box_media_item {
+  width:15%;
+  height:auto;
+  padding:2px;
+  cursor: not-allowed;
+  filter: saturate(50%) drop-shadow( 0 0  8px #535353); 
+  
+ 
+}
+//box animacja
 .slide-fade-enter-active {
   transition: all .8s ease;
 }
@@ -231,8 +249,8 @@ hr {
   transform: translateX(-100%);
   opacity: 0;
 }
-//yt animacja
 
+//yt animacja
 .heartbeat {
 	-webkit-animation: heartbeat 5s ease-in-out infinite both;
 	        animation: heartbeat 5s ease-in-out infinite both;

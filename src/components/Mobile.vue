@@ -1,28 +1,27 @@
 <template>
-  <div  >
-  
-    <div id="home" data-aos="fade-up"   >
+  <div>
+    <div id="home">
       <MobHome/>
     </div>
-     <div id="info" data-aos="fade-up" >
+     <div id="info">
       <MobInfo/>
     </div>
-    <div id="zespol" data-aos="fade-up" >
+    <div id="zespol">
       <MobCrew/>
     </div>
-    <div id="concerts" data-aos="fade-up" >
+    <div id="concerts">
       <MobConcerts/>
     </div>
-    <div id="music" data-aos="fade-up" >
+    <div id="music">
       <MobMusic/>
     </div>
-     <div id="gallery" data-aos="fade-up" >
+     <div id="gallery">
       <MobGallery/>
     </div>
-     <div id="contact" data-aos="fade-up" >
+     <div id="contact">
       <MobContact/>
     </div>
-    <div id="rider" data-aos="fade-up" >
+    <div id="rider">
       <MobRider/>
     </div>
    </div>
@@ -41,9 +40,7 @@ import 'aos/dist/aos.css'
 
 export default {
   name: 'Mobile',
-  props: {
-    msg: String
-  },
+  
    components: {
     MobHome,
     MobInfo,
