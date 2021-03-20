@@ -1,8 +1,26 @@
 <template>
   <div>
     <h1>Zespół</h1>
-    </div>
-   
+    <div class="parent">
+      <div class="div1">
+        <div class="parent_con"></div>
+      </div>
+      <div class="div2">
+        <div class="parent_con"></div>
+      </div>
+      <div class="div3">
+        <div class="parent_con"></div>
+      </div>
+      <div class="div4">
+        <div class="parent_con"></div>
+      </div>
+      <div class="div5">
+        <div class="parent_con"></div>
+      </div>
+      <div class="div6">
+        <div class="parent_con"></div>
+      </div>
+    </div> 
   </div>
 </template>
 
@@ -24,19 +42,6 @@ export default {
 
 <style scoped lang="scss">
 
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
-}
 h1 {
   text-align: center;
   font-size:60px;
@@ -47,67 +52,40 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   }
-h2{
-  text-align: center;
-  font-size:18px;
-  color: white;
-  margin: 0;
-  position: relative;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}  
 
 div {
   background:black;
   padding:0;
+  color: white;
+
  }
 
- .grid-container {
-  border:solid;
-  position:relative;
-  height:80%;  
-  margin-top:30px;
-  padding:0;
+.parent {  
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas:
-    "Wojtek Rafał . ."
-    "Bartek Seba . ."
-    "Michał Maciej . .";
+  justify-content: center;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  margin-top:7px;
+  padding-top:5%;
+  
 }
 
-.Wojtek { grid-area: Wojtek; }
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+.div4 { grid-area: 2 / 1 / 3 / 2; }
+.div5 { grid-area: 3 / 1 / 4 / 2; }
+.div6 { grid-area: 3 / 2 / 4 / 3; }
 
-.Rafał { grid-area: Rafał; }
-
-.Bartek { grid-area: Bartek; }
-
-.Seba { grid-area: Seba; }
-
-.Michał { grid-area: Michał; }
-
-.Maciej { grid-area: Maciej; }
-
-.Wojtek, .Rafał, .Bartek, .Seba, .Michał, .Maciej {
-  height:90%;
+.div1 , .div2 ,.div3,.div4, .div5, .div6 {
   border:solid;
-  border-color:green;
-  margin:7px;
+  border-color:red;
+  justify-content: center ; 
 }
-.full{
-  border: 2px solid #676A7F;
-  position:fixed;
-  left:-7px;
-  top: 89px;
 
-  z-index:99;
-  height:calc(100% - 100px);
-
-  padding:0;
-  width:99%;
-
+.parent_con {
+  width:23vh;
+  height:19vh;
 }
 </style>

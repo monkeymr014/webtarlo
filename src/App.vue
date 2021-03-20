@@ -27,13 +27,13 @@
         </div>
         <div class="box_media">
           <a href="https://www.facebook.com/tarlorockband/" target="_blank" >
-            <img class="box_media_item" alt="tarło" src="./assets/media/fb.png" />
+            <img class="box_media_item" alt="tarło" src="./assets/media/fb_b.png" />
           </a>
           <a href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg" target="_blank" >
-            <img class="box_media_item" alt="tarło" src="./assets/media/yt.png" />
+            <img class="box_media_item" alt="tarło" src="./assets/media/yt_b.png" />
           </a>
           <a href="https://www.instagram.com/tarlo_rockband/" target="_blank" >
-            <img class="box_media_item" alt="tarło" src="./assets/media/insta.png" />
+            <img class="box_media_item" alt="tarło" src="./assets/media/insta_b.png" />
           </a>
         </div>
       </div>
@@ -187,7 +187,7 @@ img, a {
 
 //box
 .box {
-  background: #1F1F1F;
+  background: black;
   position: fixed;
   top: 96px;
   transition: transform 0.4s;
@@ -234,7 +234,7 @@ img, a {
   height:auto;
   padding:2px;
   cursor: not-allowed;
-  filter: saturate(50%) drop-shadow( 0 0  8px #535353); 
+   filter: saturate(10%) drop-shadow(   -0px 3px  5px white); 
   
  
 }
