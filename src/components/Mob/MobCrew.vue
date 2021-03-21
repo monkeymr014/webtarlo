@@ -2,8 +2,9 @@
   <div>
     <h1>Zespół</h1>
     <div class="parent">
+    Zrób flexbox???
       <div class="div1">
-        <div class="parent_con"></div>
+        <div class="parent_con" v-on:click="isEnabled = !isEnabled" :class="{ box_active : isEnabled }" ></div>
       </div>
       <div class="div2">
         <div class="parent_con"></div>
@@ -29,7 +30,7 @@ export default {
   name: 'MobCrew',
  data() {
     return {
-      wojtekRaid: false,
+      isEnabled: false,
       rafalRaid:  false,
       bartekRaid: false,
       sebaRaid:   false,
@@ -57,18 +58,22 @@ div {
   background:black;
   padding:0;
   color: white;
-
+  position:relative;
+ 
  }
 
 .parent {  
-  display: grid;
-  justify-content: center;
+ display: grid;
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
-  margin-top:7px;
-  padding-top:5%;
-  
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  position:absolute;
+  clear: both;
+  bottom:0;
+  height:80%;
+  width:100%;
+  border:solid;
+  border-color:red;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -81,11 +86,25 @@ div {
 .div1 , .div2 ,.div3,.div4, .div5, .div6 {
   border:solid;
   border-color:red;
-  justify-content: center ; 
+ 
 }
 
-.parent_con {
-  width:23vh;
-  height:19vh;
+.parent_con
+{
+  clear: both;
+  bottom:0;
+  height:60%;
+  width:auto;
 }
+
+.box_active {
+ background: black;
+  position: fixed;
+  top: 96px;
+  transition: transform 0.4s;
+  width: 100%;
+  height: calc(100vh - 96px) ;
+  z-index: 1;
+  padding-top:6%;
+} 
 </style>
