@@ -7,7 +7,7 @@
           <img class="box_media_item" alt="tarło" src="../../assets/crewfoto/wojtek.jpg" />
         </div>
         <transition name="fade">
-          <div v-if="wojtekRaid" class="text" >
+          <div v-if="wojtekRaid" class="text" v-on:click="wojtekRaid = !wojtekRaid, rafalRaid = false, bartekRaid = false , sebaRaid = false, michalRaid = false, maciejRaid = false " >
             <h3>Wojtek Zając</h3><p>wokalista gitara teksty</p>
           </div>
         </transition>
@@ -17,7 +17,7 @@
           <img class="box_media_item" alt="tarło" src="../../assets/crewfoto/rafal.jpg" />
         </div>
         <transition name="fade">
-          <div v-if="rafalRaid" class="text" >
+          <div v-if="rafalRaid" class="text" v-on:click="rafalRaid = !rafalRaid, wojtekRaid = false, bartekRaid = false , sebaRaid = false, michalRaid = false, maciejRaid = false" >
             <h3>Rafał Wielgosz</h3><p>gitara teksty</p>
           </div>
         </transition>
@@ -27,7 +27,7 @@
           <img class="box_media_item" alt="tarło" src="../../assets/crewfoto/bartek.jpg" />
         </div>
         <transition name="fade">
-          <div v-if="bartekRaid" class="text" >
+          <div v-if="bartekRaid" class="text"  v-on:click="bartekRaid = !bartekRaid, rafalRaid = false, wojtekRaid = false , sebaRaid = false, michalRaid = false, maciejRaid = false" >
             <h3>Bartek Wielgosz</h3><p>gitara</p>
           </div>
         </transition>
@@ -36,8 +36,8 @@
         <div class="parent_con" v-on:click="sebaRaid = !sebaRaid, rafalRaid = false, bartekRaid = false , wojtekRaid = false, michalRaid = false, maciejRaid = false" :class="{ box_active : sebaRaid }">
           <img class="box_media_item" alt="tarło" src="../../assets/crewfoto/seba.jpg" />
         </div>
-        <transition name="fade">
-          <div v-if="sebaRaid" class="text" >
+        <transition name="fade" >
+          <div v-if="sebaRaid" class="text" v-on:click="sebaRaid = !sebaRaid, rafalRaid = false, bartekRaid = false , wojtekRaid = false, michalRaid = false, maciejRaid = false" >
             <h3>Sebastian Pokojowy</h3><p>gitara basowa</p>
           </div>
         </transition>
@@ -47,19 +47,18 @@
           <img class="box_media_item" alt="tarło" src="../../assets/crewfoto/michal.jpg" />
         </div>
         <transition name="fade">
-          <div v-if="michalRaid" class="text" >
+          <span v-if="michalRaid" class="text" v-on:click="michalRaid = !michalRaid, rafalRaid = false, bartekRaid = false , sebaRaid = false, wojtekRaid = false, maciejRaid = false" >
             <h3>Michał Ruszkiewicz</h3><p>perkusja</p>
-          </div>
+          </span>
         </transition>
       </div>
       <div class="item">
         <div class="parent_con" v-on:click="maciejRaid = !maciejRaid, rafalRaid = false, bartekRaid = false , sebaRaid = false, michalRaid = false, wojtekRaid = false" :class="{ box_active : maciejRaid }">
-          <img class="box_media_item" alt="tarło" src="../../assets/crewfoto/bartek.jpg" />
         </div>
         <transition name="fade">
-          <div v-if="maciejRaid" class="text" >
+          <span v-if="maciejRaid" class="text" v-on:click="maciejRaid = !maciejRaid, rafalRaid = false, bartekRaid = false , sebaRaid = false, michalRaid = false, wojtekRaid = false" >
             <h3>Maciej Gładysz</h3><p>producent muzyczny</p>
-          </div>
+          </span>
         </transition>
       </div>
     </div> 
@@ -89,29 +88,28 @@ h1 {
   font-size:60px;
   color: white;
   margin: 0;
-  position: relative;
+  position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   }
 .text{
-    position:absolute;
-    background:none;
-     font-size:18px;
+  position:absolute;
+  background:none;
   color:red;
   top:50%;
   margin:0;
   padding:0;
   left: 50%;
   transform: translate(-50%, -50%);
-    
-
 }
+
 
 h3{
   font-size:24px;
   margin:0;
   padding:2px;
+  position:relative;
 }
 p {
   font-size:20px;
@@ -155,8 +153,7 @@ div {
   border-color:black;
   margin:0;
   padding:0;
-  z-index:1;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .box_active {

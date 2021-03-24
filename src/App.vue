@@ -85,7 +85,7 @@ h1 {
 img, a {
   position:relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 #app {
@@ -220,10 +220,9 @@ img, a {
 }
 
 .box_media {
-  position: absolute;
+  position: relative;
   text-align: center;
-  clear: both;
-  bottom:3vh;
+  top:10px;
   width:100%;
   height:auto;
   
@@ -232,10 +231,10 @@ img, a {
 .box_media_item {
   width:15%;
   height:auto;
-  padding:2px;
+  padding:0.7px;
   cursor: not-allowed;
-   filter: saturate(10%) drop-shadow(   -0px 3px  5px white); 
-  
+   background:white;
+  filter: saturate(10%) drop-shadow(   -0px 3px  5px white); 
  
 }
 //box animacja

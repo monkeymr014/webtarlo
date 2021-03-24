@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Tillana&subset=latin,latin-ext');
+@import url('http://fonts.googleapis.com/css?family=Alegreya+Sans+SC&subset=latin,latin-ext');
 body {
     /* Size */
     $mobileMin: 0px;
@@ -21,8 +21,11 @@ body {
         margin: 0;
         padding: 0;
         height: 100%;
-        font-family: 'DryTransferFolio-Caps',
+        font-family: 'Alegreya Sans SC',
         sans-serif;
+        h1 {
+            font-family: 'DryTransferFolio-Caps', sans-serif;
+        }
     }
     /* DESKOP */
     @media (min-width: 1024px) {
