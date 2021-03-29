@@ -1,12 +1,17 @@
 <template>
   <div>
     <h1>Rzuć Uchem</h1>
-  </div>
+    <audio src="../../assets/a.mp3" type='' >Treść alternatywna</audio>
+</div>
 </template>
 
 <script>
+import { KinesisContainer, KinesisElement} from 'vue-kinesis'
+
+
 export default {
   name: 'MobMusic',
+
 }
 </script>
 
@@ -23,8 +28,6 @@ h1 {
   transform: translate(-50%, -50%);
   }
 
-div{
-  background:black;
- }
+
 
 </style>

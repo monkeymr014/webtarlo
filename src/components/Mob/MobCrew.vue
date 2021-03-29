@@ -8,7 +8,7 @@
         </div>
         <transition name="fade">
           <div v-if="wojtekRaid" class="text" v-on:click="wojtekRaid = !wojtekRaid, rafalRaid = false, bartekRaid = false , sebaRaid = false, michalRaid = false, maciejRaid = false " >
-            <h3>Wojtek Zając</h3><p>wokalista gitara teksty</p>
+            <h3>Veddie Hare</h3><p>wokalista gitara teksty</p>
           </div>
         </transition>
       </div>
@@ -83,6 +83,7 @@ export default {
 
 <style scoped lang="scss">
 
+
 h1 {
   text-align: center;
   font-size:60px;
@@ -106,13 +107,13 @@ h1 {
 
 
 h3{
-  font-size:24px;
+  font-size:23px;
   margin:0;
-  padding:2px;
+  padding:1px;
   position:relative;
 }
 p {
-  font-size:20px;
+  font-size:19px;
   margin:0;
 }
 img {

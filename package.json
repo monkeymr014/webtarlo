@@ -9,9 +9,13 @@
   "dependencies": {
     "@guillaumebriday/vue-scroll-progress-bar": "^1.0.0",
     "aos": "^2.3.4",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-audio": "0.0.12",
+    "vue-audio-visual": "^2.2.2",
     "vue-burger-menu": "^2.0.5",
+    "vue-kinesis": "^1.2.3",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {

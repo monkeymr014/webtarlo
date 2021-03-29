@@ -59,7 +59,8 @@ export default {
 <style scoped lang="scss">
 
 div { 
-  height: calc(100vh - 96px) ;
+
+  height: calc(100vh - 96px)  ;
   margin:0;    
   padding: 0;
  }

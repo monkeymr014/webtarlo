@@ -7,7 +7,7 @@
   	    </span> 
       </button>
       <h1>Tarło</h1>
-      <div id="ytlogo" data-aos="fade-down-left"  >
+      <div id="ytlogo"   >
         <a href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg" target="_blank" >
           <img class="heartbeat" alt="tarlo" src="./assets/media/yttop.png" />
         </a>
@@ -86,6 +86,7 @@ img, a {
   position:relative;
   width: 100%;
   height: auto;
+  z-index:99;
 }
 
 #app {

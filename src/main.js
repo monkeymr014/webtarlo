@@ -2,16 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
+import VueKinesis from 'vue-kinesis'
 
-import AOS from 'aos'
 
+Vue.use(VueKinesis)
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 new Vue({
-    created() {
-        AOS.init()
-    },
     router,
     render: h => h(App)
 }).$mount('#app')
