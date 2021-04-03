@@ -58,11 +58,20 @@ export default {
 
 <style scoped lang="scss">
 
-div { 
-
+.full { 
+  position:relative;
   height: calc(100vh - 96px)  ;
   margin:0;    
   padding: 0;
  }
  
+ .res { 
+  position:relative;
+  min-height: calc(100vh - 96px)  ;
+
+  max-height: 100% ;
+  margin:0;    
+  padding: 0;
+  z-index:2;
+ }
 </style>

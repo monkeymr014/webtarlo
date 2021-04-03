@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="full" >
     <h1>Koncerty</h1>
     <p>{{List}}</p>
     <ul>
@@ -31,14 +31,13 @@ export default {
   },
   computed: {                                                      
     List: function() {                                    
-      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events%7Bname%2Cstart_time%2Ccover%7D&access_token=EAAEyl1RiMPcBAJ71AWZBSdA6tXpprmV2z0Obj4VdhJSqzU7JUC4QmwXS10PxOYCree7foON02fhUyYOVBuQZBuJzfETuCpdZBsCN1iryw77syJ7GvZCP09XXIT8Ub7DOvpzqcLQZBZCuH6flF955kvSDUQNDT2dkFIKjmjKhERLY7qg5Ib9lR584f9iLhOxI3UpfC34hbEJ3iYzkwHQoN0nteoXyD2q8aw5zGoZBr15LwZDZD')
+      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events%7Bname%2Cstart_time%2Ccover%7D&access_token=EAAEyl1RiMPcBABbz6QCatW6s02pqL1hrGtljKnV8uvMffm8HdZBpZABPSwbgX9grMjQhLPHeBZC7BXzPNbIQGOYcNH0j3XNYbCggThtqjW5U0zRkh2tDqm40h8FCkUml6hsnToQjToNHi1BLj3ChRTvGfAS8T7tBXeSM6elCgZDZD')
         .then((re) => {
           this.results = re.data.data[0].events.data;
           }) 
         }
       } 
 }
-
 </script>
 <style scoped lang="scss">
 
@@ -62,13 +61,14 @@ ul{
   position:relative;
   left:0;
   margin:1px;
+  margin-bottom:20px;
   padding:0;
 }
 
  table{
   position:relative;
   left:0;
-  top:20px;
+  top:10px;
   margin:0;
   padding:0;
   border-bottom: 1px solid black;
@@ -83,16 +83,14 @@ h1 {
   text-align: center;
   font-size:60px;
   color: black;
-  margin: 0;
-  position: relative;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0px;
+  margin-top: 20px;
   }
 
 div {
   background:white;
   padding:0;
+  margin:0;
  }
 
  </style>

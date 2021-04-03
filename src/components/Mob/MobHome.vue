@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="full" >
     <h1>Oficjalna <br/> strona <br/> Zespołu</h1>
   </div>
 </template>

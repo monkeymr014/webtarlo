@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="full" >
     <h1>Zespół</h1>
     <div class="container">
       <div class="item">
