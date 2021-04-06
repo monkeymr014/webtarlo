@@ -24,8 +24,12 @@
       </div>
       <div class="music_media_container" >
         <p>Posłuchaj sobie na</p>
-          <img class="music_media" alt="tarło" src="../../assets/media/itunes.jpg" />
-          <img class="music_media" alt="tarło" src="../../assets/media/spotify.jpg" />
+          <a href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4" target="_blank" >
+            <img class="music_media" alt="tarło" src="../../assets/media/itunes.jpg" />
+          </a>
+          <a href="ttps://open.spotify.com/album/6Rt14PX4Mo4q4qqGbFe624" target="_blank" >
+           <img class="music_media" alt="tarło" src="../../assets/media/spotify.jpg" />
+           </a>
       </div>
     </div>
   </div>
@@ -57,7 +61,11 @@ h1 {
   }
 
 div{
+
   background:black;
+}
+a {
+  cursor: not-allowed;
 }
 .album_img{
   width: 160px;
@@ -89,8 +97,8 @@ div{
 }
 .music_media_container {
   position:relative;
-  top:30px;
   margin:2px;
+  margin-top:30px;
 
 }
 .person {

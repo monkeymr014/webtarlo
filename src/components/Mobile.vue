@@ -68,10 +68,9 @@ export default {
  .res { 
   position:relative;
   min-height: calc(100vh - 96px)  ;
-
   max-height: 100% ;
   margin:0;    
   padding: 0;
-  z-index:2;
+  z-index:1;
  }
 </style>

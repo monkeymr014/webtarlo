@@ -194,7 +194,7 @@ img, a {
   transition: transform 0.4s;
   width: 100%;
   height: calc(100vh - 96px) ;
-  z-index: 1;
+  z-index: 2;
   padding-top:6%;
   
 }

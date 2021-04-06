@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="full">
     <h1>Kontakt</h1>
   </div>
 </template>
@@ -13,14 +13,12 @@ export default {
 <style scoped lang="scss">
 
 h1 {
+  position:relative;
   text-align: center;
   font-size:60px;
   color: white;
-  margin: 0;
-  position: relative;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0px;
+  top: 20px;
   }
 
 div{
