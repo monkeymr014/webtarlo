@@ -22,7 +22,7 @@
         <h2>Filmy</h2>
       </div>
       <transition name="fade">
-        <div v-if="foto" class="video" >
+        <div v-if="video" class="video" >
           <router-link to="/#gallery">
             <div class="outer" v-on:click="video = false" >
               <div class="inner">
@@ -37,6 +37,8 @@
     </div>
   </div>
 </template>
+
+
 
 <script>
 export default {
@@ -89,7 +91,7 @@ div {
   border-radius: 30px; ;
 }
 
-.foto  {
+.foto, .video  {
   background: black;
   position: fixed;
   top: 96px;
@@ -98,16 +100,8 @@ div {
   z-index: 1;
   color:red;
 }
-.video  {
-  background: black;
-  position: fixed;
-  top: 96px;
-  width: 100%;
-  height: calc(100vh - 96px) ;
-  z-index: 1;
-  color:red;
-}
-.foto_box {
+
+.foto_box, .video_box {
   border:solid red;
   position:fixed;
   width: 100%;
@@ -118,17 +112,7 @@ div {
 
 
 }
-.video_box {
-  border:solid red;
-  position:fixed;
-  width: 100%;
-  top: 156px;
-  height: calc(100vh - 96px) ;
-  background:black;
-  overflow:scroll;
 
-
-}
 
 //close
 
@@ -202,10 +186,10 @@ label {
 
 //animacja 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity .2s;
 }
 .fade-enter, .fade-leave-to  {
-  opacity: 4s;
+  opacity: 2s;
 }
 
  </style>
