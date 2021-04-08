@@ -2,7 +2,7 @@
   <div class="full">
     <h1>Kontakt</h1>
       <div class="container">
-        <form>
+<form>
           <label>Name</label>
           <input 
             type="text" 
@@ -25,7 +25,7 @@
             placeholder="Message">
           </textarea>
           
-          <input type="submit" value="Send">
+<button click="greet">Greet</button>
         </form>
     </div>
   </div>
@@ -36,6 +36,9 @@ import emailjs from 'emailjs-com';
 
 export default {
   name: 'MobContact',
+   components: {
+    emailjs
+    },
     data() {
     return {
       name: '',
@@ -44,14 +47,15 @@ export default {
     }
   },
   methods: {
-    sendEmail(e) {
+    greet: function(e) {
       try {
         emailjs.sendForm('service_46bjg8v', 'template_fonmsc8', e.target,
         'user_mwTWZlwJHiErHuGulK2b1', {
           name: this.name,
           email: this.email,
           message: this.message
-        })
+        }),
+        console.log('poszło');
 
       } catch(error) {
           console.log({error})
@@ -60,7 +64,7 @@ export default {
       this.name = ''
       this.email = ''
       this.message = ''
-    },
+    }
   }
 }
 </script>
