@@ -22,6 +22,7 @@
           <span class="person">Maciek Gładysz </span>
         </p>      
       </div>
+    </div>
       <div class="music_media_container" >
         <p>Posłuchaj sobie na</p>
           <a href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4" target="_blank" >
@@ -31,7 +32,6 @@
            <img class="music_media" alt="tarło" src="../../assets/media/spotify.jpg" />
            </a>
       </div>
-    </div>
   </div>
 </template>
 
@@ -63,12 +63,24 @@ h1 {
 div{
 
   background:black;
+  color:white;
 }
 a {
   cursor: not-allowed;
 }
 .album_img{
-  width: 160px;
+  @media (max-height: 600px){
+  width: 100px;
+   }
+   @media (min-height: 700px){
+  width: 120px;
+   }
+    @media (min-height: 800px){
+  width: 180px;
+
+   }
+  width: 180px;
+ 
   padding:0px;
   margin:8px;
 }
@@ -83,6 +95,7 @@ a {
   color:white;
   font-size:15px;
   top:20px;
+  height:100%;
 
 }
 
@@ -96,9 +109,13 @@ a {
   margin-right:2px;
 }
 .music_media_container {
-  position:relative;
-  margin:2px;
-  margin-top:30px;
+  position:absolute;
+  width:100%;
+  text-align: center;
+  margin:auto;
+  clear: both;
+  bottom:10px;
+  padding:0;
 
 }
 .person {

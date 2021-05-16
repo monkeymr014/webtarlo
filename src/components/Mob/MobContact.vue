@@ -1,31 +1,27 @@
 <template>
   <div class="full">
     <h1>Kontakt</h1>
+      <div class="tel">
+        <p>Zadzwoń do nas <br/> tel: +48 728 306 334</p>
+      </div>
       <div class="container">
-<form>
-          <label>Name</label>
-          <input 
-            type="text" 
-            v-model="name"
-            name="name"
-            placeholder="Your Name"
-          >
+      <p>lub napisz e-mail</p>
+        <form @submit.prevent="sendEmail">
           <label>Email</label>
           <input 
             type="email" 
             v-model="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Twój Email"
             >
-          <label>Message</label>
+          <label>Wiadomość</label>
           <textarea 
             name="message"
             v-model="message"
             cols="30" rows="5"
-            placeholder="Message">
+            placeholder="W czym możemy pomóc?">
           </textarea>
-          
-<button click="greet">Greet</button>
+          <input type="submit" value="Wyślij">
         </form>
     </div>
   </div>
@@ -41,17 +37,15 @@ export default {
     },
     data() {
     return {
-      name: '',
       email: '',
       message: ''
     }
   },
-  methods: {
-    greet: function(e) {
+ methods: {
+    sendEmail(e) {
       try {
-        emailjs.sendForm('service_46bjg8v', 'template_fonmsc8', e.target,
+        emailjs.sendForm('service_fxmygtq', 'template_mwhkdro', e.target,
         'user_mwTWZlwJHiErHuGulK2b1', {
-          name: this.name,
           email: this.email,
           message: this.message
         }),
@@ -61,7 +55,6 @@ export default {
           console.log({error})
       }
       // Reset form field
-      this.name = ''
       this.email = ''
       this.message = ''
     }
@@ -79,20 +72,36 @@ h1 {
   margin: 0px;
   top: 20px;
   }
+p {
+  font-size:20px;
+  margin:2px;
 
+}
 div{
-  background:white;
+  background:black;
+  color: white;
+  text-align: center;
  }
  * {box-sizing: border-box;}
-
+.tel {
+  margin:0;
+  padding:0;
+  margin-top:15%;
+}
 .container {
-  display: block;
+  position:absolute;
+  clear: both;
   margin:auto;
+  @media (max-height: 700px){
+  bottom:5px;
+   }
+  bottom:20%;
+  display: block;
   text-align: center;
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 50%;
+  background-color: black;
+  padding: 7px;
+  width: 100%;
 }
 
 label {
@@ -111,16 +120,17 @@ input[type=text], [type=email], textarea {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
+  background-color: red;
+  color: black;
+  padding: 8px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: red;
 }
 
 </style>
