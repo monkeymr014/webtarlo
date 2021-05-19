@@ -27,9 +27,7 @@
 // @ is an alias to /src
 
 export default {
-  name: 'About',
-  components: {
-    About
-  }
+  name: 'Info',
+  
 }
 </script>

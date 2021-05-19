@@ -12,7 +12,7 @@ body {
     /*Coros*/
     $greenDark: #263238;
     /* MOBILE */
-    @media (max-width: $laptopMax) {
+    @media (max-width: $tablesMax) {
         .deskop {
             display: none;
         }
@@ -28,16 +28,20 @@ body {
         }
     }
     /* DESKOP */
-    @media (min-width: 1024px) {
+    @media (min-width: $laptopMin) {
         .mobile {
             display: none;
         }
-        background: red;
         background-size: 100%;
         display: block;
         margin: 0;
         padding: 0;
         height: 100%;
+        font-family: 'Alegreya Sans SC',
+        sans-serif;
+        h1 {
+            font-family: 'DryTransferFolio-Caps', sans-serif;
+        }
     }
 }
 
