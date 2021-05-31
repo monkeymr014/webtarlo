@@ -4,26 +4,26 @@
       <Mobile/>
     </div>
     <div class="deskop" >
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <DesHome/>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import Mobile from '@/components/Mobile.vue'
+import DesHome from '@/components/DesHome.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
-    Mobile
+    Mobile,
+    DesHome
 
     
   }
 }
 </script>
-<style lang="scss">
+<style  lang="scss">
 
 </style>

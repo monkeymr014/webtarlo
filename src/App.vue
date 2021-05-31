@@ -17,7 +17,7 @@
        <div class="box_des_content" >
           <router-link to="/">Home</router-link><hr/>
           <router-link to="/info">O Nas</router-link><hr/>
-          <router-link to="/zespol">Zespół</router-link><hr/>
+          <router-link to="/crew">Zespół</router-link><hr/>
           <router-link to="/concerts"><span>Koncerty</span></router-link><hr/>
           <router-link to="/music"><span>Rzuć Uchem</span></router-link><hr/>
           <router-link to="/gallery"><span>Rzuć Okiem</span></router-link><hr/>
@@ -115,10 +115,16 @@ img, a {
 
 #content {  
   float: left;
+  margin:0;    
   margin-top:96px;
   padding: 0;
   width: calc(100% - 0px) ;
-    }
+  position:relative;
+  height: calc(100vh - 96px)  ;
+  overflow:hidden;
+ }
+
+
 
 //Burger
 
