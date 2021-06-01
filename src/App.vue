@@ -83,15 +83,15 @@ h1 {
 
 #ytlogo {
   position:fixed;
-  left:1%;
-  height: 5%;
+  left:2%;
+  height: 4%;
   width: 16%;
-  margin:2%;
+  margin:1.5%;
 }
 
 img, a {
   position:relative;
-  width: 55%;
+  width: 50%;
   height: auto;
   z-index:99;
 }
@@ -107,21 +107,19 @@ img, a {
   padding: 0;
   position: fixed;
   width: 100%;
-  height:  20%;
+  height: 17%;
   z-index: 99;
   background:#1F1F1F;
   top:0;
 }
 
 #content {  
+  position:absolute;
   float: left;
-  margin:0;    
-  margin-top:96px;
+  margin:0;
+  top:17%;
   padding: 0;
-  width: calc(100% - 0px) ;
-  position:relative;
-  height: calc(100vh - 96px)  ;
-  overflow:hidden;
+  height:calc(100vh - 17%);
  }
 
 
@@ -134,22 +132,23 @@ img, a {
 
 //box_mob
 .box_des {
+  position:relative;
   padding: 0;
   margin-top: 3%;
   text-align: center;
-
-}
+  }
 .box_mob {
   display:none;
-}
+  }
 .box_des_content a{
 float: left;
 text-align: center;
-font-size: 1em;
+font-size: 1.5em;
 margin:5px;;
 left:15%;
 width: 10%;
-padding:2px;
+height:40%;
+padding:3px;
 color:white;
 text-decoration: none;
 border: 3px inset rgba(194,171,171,0.89);

@@ -35,11 +35,5 @@ h1 {
   margin-top:1%;
 }
 
-.block {
-  position:relative;
-  height:100vh;
-  weight:100%;
-  background:black;
-  color:white;
-}
+
 </style>
