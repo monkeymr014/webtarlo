@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="block">
     <h1>Oficjalna strona Zespołu</h1>
  </div>
 </template>
@@ -23,17 +23,19 @@ h1 {
   margin-top: 25%;
   color:#b30000;
   }
-div {
-  position: fixed;
+.block {
+  position:abolute;
   padding: 0;
   width:100%;
-  
+  height:calc(100vh - 6em);
+  max-height:100%;
+  overflow:hidden;
   background: black;
   background-image: url(../assets/background_des.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: 100%;
   
   }
+
 </style>

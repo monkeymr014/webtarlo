@@ -107,7 +107,7 @@ img, a {
   padding: 0;
   position: fixed;
   width: 100%;
-  height: 17%;
+  height: 6em;
   z-index: 99;
   background:#1F1F1F;
   top:0;
@@ -117,9 +117,9 @@ img, a {
   position:absolute;
   float: left;
   margin:0;
-  top:17%;
+  top:6em;
   padding: 0;
-  height:calc(100vh - 17%);
+  width:100%;
  }
 
 
@@ -143,15 +143,15 @@ img, a {
 .box_des_content a{
 float: left;
 text-align: center;
-font-size: 1.5em;
+font-size: 1em;
 margin:5px;;
 left:15%;
 width: 10%;
-height:40%;
-padding:3px;
+height:10%;
+padding:2px;
 color:white;
 text-decoration: none;
-border: 3px inset rgba(194,171,171,0.89);
+border: 1.6px inset rgba(194,171,171,0.89);
 border-radius: 40px 40px 40px 40px;
 background: rgba(0,0,0,0.6);
 
