@@ -16,9 +16,11 @@ body {
         .deskop {
             display: none;
         }
+        background-size: 100%;
         display: block;
-        
-        
+        margin: 0;
+        padding: 0;
+        height: 100%;
         font-family: 'Alegreya Sans SC',
         sans-serif;
         h1 {
@@ -30,6 +32,7 @@ body {
         .mobile {
             display: none;
         }
+        background-size: 100%;
         display: block;
         margin: 0;
         padding: 0;

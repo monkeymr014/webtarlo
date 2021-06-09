@@ -347,7 +347,7 @@ img, a {
   float: left;
   margin-top:96px;
   padding: 0;
-  width: calc(100% - 0px) ;
+  width: 100%  ;
     }
 
 //Burger
