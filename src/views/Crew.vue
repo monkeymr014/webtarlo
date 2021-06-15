@@ -4,8 +4,6 @@
     <div class="crew_box">
       <DesCrew/>
     </div>
-
-
   </div>
 
 </template>
@@ -29,9 +27,13 @@ h1 {
   top: 2%;
 
   }
-
+.block {
+position:relative;
+min-height:calc(100vh - 6em);
+background:black;
+overflow:hidden;
+}
 .crew_box {
-  border:solid red;
   margin-top:1%;
 }
 
