@@ -82,18 +82,20 @@ h1 {
   }
 
 #ytlogo {
-  position:fixed;
-  left:2%;
-  height: 4%;
-  width: 16%;
-  margin:1.5%;
+  position: absolute;
+    left: 3%;
+    height: 2em;
+    width: 10em;
+    margin: 1em;
+ 
 }
 
 img, a {
-  position:relative;
+  position: relative;
   width: 50%;
-  height: auto;
-  z-index:99;
+    height: auto;
+    z-index: 99;
+  
 }
 
 #app {
@@ -103,14 +105,14 @@ img, a {
 }
 
 #nav {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  width: 100%;
-  height: 6em;
-  z-index: 99;
-  background:#1F1F1F;
-  top:0;
+      margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 6em;
+    z-index: 99;
+    background: #1f1f1f;
+    top: 0;
 }
 
 #content {  
@@ -132,28 +134,28 @@ img, a {
 
 //box_mob
 .box_des {
-  position:relative;
-  padding: 0;
-  margin-top: 3%;
-  text-align: center;
+  position: relative;
+    padding: 0;
+    margin-top: 2em;
+    text-align: center;
   }
 .box_mob {
   display:none;
   }
 .box_des_content a{
 float: left;
-text-align: center;
-font-size: 1em;
-margin:5px;;
-left:15%;
-width: 10%;
-height:10%;
-padding:2px;
-color:white;
-text-decoration: none;
-border: 1.6px inset rgba(194,171,171,0.89);
-border-radius: 40px 40px 40px 40px;
-background: rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 110%;
+    margin: 5px;
+    left: 15%;
+    width: 10%;
+    height: 20%;
+    padding: 2px;
+    color: #fff;
+    text-decoration: none;
+    border: 1.6px inset rgba(194,171,171,.89);
+    border-radius: 40px 40px 40px 40px;
+    background: rgba(0,0,0,.6);
 
 
 }

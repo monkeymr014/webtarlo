@@ -37,14 +37,14 @@ h1 {
   }
 
 p {
-  position:relative;
-  margin-top:3%;
-  font-size:1.3em;
-  padding:8%;
-  padding-top:0;
-  padding-bottom:0;
-  text-align: center;
-  color:white;
+ position: relative;
+    margin-top: 3%;
+    font-size: 1.5em;
+    padding: 20%;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    color: #fff;
 }
 
 </style>
