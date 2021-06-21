@@ -1,33 +1,39 @@
 <template>
-  <div class="block" id="about">
-    <h1>This is an about page</h1>
-    <p>sdfddfdsdfs</p>
-        <p>sdfddfdsdfs</p>
-
-    <p>sdfddfdsdfs</p>
-
-    <p>sdfddfdsdfs</p>
-
-    <p>sdfddfdsdfs</p>
-    <p>sdfddfdsdfs</p>
-
-    <p>sdfddfdsdfs</p>
-
-    <p>sdfddfdsdfs</p>
-
-
-    <p>sdfddfdsdfs</p>
-    <p>sdfddfdsdfs</p>
-
-
+  <div class="block" >
+    <h1>Koncerty</h1>
+    <div >
+      <DesConcerts/>
+    </div>
   </div>
-
 </template>
 <script>
-// @ is an alias to /src
+
+import DesConcerts from '@/components/DesConcerts.vue'
 
 export default {
   name: 'Concerts',
- 
+  components: { 
+    DesConcerts
+  }
 }
 </script>
+<style scoped lang="scss">
+
+h1 {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  font-size: 60px;
+  color: #b30000;
+  margin: 0;
+}
+
+.block {
+  position:relative;
+  min-height:calc(100vh - 6em);
+  background:black;
+  overflow:hidden;
+}
+
+
+</style>
