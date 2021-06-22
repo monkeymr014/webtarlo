@@ -7,7 +7,7 @@
         <table>
           <tr> 
             <td id="data">{{ item.start_time.substring(0,10) }} </td>
-            <td id="name">{{ item.name }}</td> </a><br/>
+            <td id="name">{{ item.name }}</td> <br/>
           </tr>
         </table>
       </li>
