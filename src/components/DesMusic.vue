@@ -22,15 +22,7 @@
         </p>      
       </div>
     </div>
-      <div class="music_media_container" >
-        <p>Posłuchaj sobie na</p>
-          <a href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4" target="_blank" >
-            <img class="music_media" alt="tarło" src="../assets/media/itunes.jpg" />
-          </a>
-          <a href="ttps://open.spotify.com/album/6Rt14PX4Mo4q4qqGbFe624" target="_blank" >
-           <img class="music_media" alt="tarło" src="../assets/media/spotify.jpg" />
-           </a>
-      </div>
+      
 </div>
 </template>
 
@@ -86,10 +78,6 @@ a {
   margin:8px;
 
 }
-.music_media{
-  width: 120px;
-  padding:0px;
-}
 
 .container {
   text-align: center;
@@ -109,16 +97,7 @@ a {
   margin-left:40%;
   margin-right:2px;
 }
-.music_media_container {
-  position:absolute;
-  width: 100%;
-  text-align: center;
-  margin:auto;
-  clear: both;
-  bottom:20px;
-  padding:0;
 
-}
 .person {
   color:red;
 }

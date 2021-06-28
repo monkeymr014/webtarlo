@@ -2,15 +2,19 @@
   <div class="block" id="about">
     <h1>Rzuć uchem</h1>
       <DesMusic/>
+      <DesMusicFooter/>
   </div>
 </template>
 <script>
 import DesMusic from '@/components/DesMusic.vue';
 
+import DesMusicFooter from '@/components/DesMusicFooter.vue';
+
 export default {
   name: 'Music',
   components: { 
-  DesMusic
+  DesMusic,
+  DesMusicFooter
   }
 }
 </script>

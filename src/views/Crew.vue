@@ -4,16 +4,20 @@
     <div class="crew_box">
       <DesCrew/>
     </div>
+      <DesMusicFooter/>
   </div>
 
 </template>
 <script>
 import DesCrew from '@/components/DesCrew.vue'
+import DesMusicFooter from '@/components/DesMusicFooter.vue';
+
 
 export default {
   name: 'Crew',
   components: { 
-    DesCrew
+    DesCrew,
+    DesMusicFooter
   }
 }
 </script>

@@ -7,6 +7,7 @@ import Crew from '../views/Crew.vue'
 import Concerts from '../views/Concerts.vue'
 import Music from '../views/Music.vue'
 import Gallery from '../views/Gallery.vue'
+import Contact from '../views/Contact.vue'
 
 
 
@@ -47,6 +48,12 @@ const routes = [{
         path: '/gallery',
         name: 'Gallery',
         component: Gallery
+
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact
 
     }
 

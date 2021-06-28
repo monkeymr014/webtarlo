@@ -1,19 +1,23 @@
 <template>
   <div class="block" >
     <h1>Koncerty</h1>
-    <div >
+    <div>
       <DesConcerts/>
+      <DesMusicFooter/>
     </div>
   </div>
 </template>
 <script>
 
 import DesConcerts from '@/components/DesConcerts.vue'
+import DesMusicFooter from '@/components/DesMusicFooter.vue';
+
 
 export default {
   name: 'Concerts',
   components: { 
-    DesConcerts
+    DesConcerts,
+    DesMusicFooter
   }
 }
 </script>

@@ -30,7 +30,7 @@ export default {
   },
   computed: {                                                      
     List: function() {                                    
-      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events%7Bname%2Cstart_time%2Ccover%7D&access_token=EAAEyl1RiMPcBABbz6QCatW6s02pqL1hrGtljKnV8uvMffm8HdZBpZABPSwbgX9grMjQhLPHeBZC7BXzPNbIQGOYcNH0j3XNYbCggThtqjW5U0zRkh2tDqm40h8FCkUml6hsnToQjToNHi1BLj3ChRTvGfAS8T7tBXeSM6elCgZDZD')
+      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events%7Bname%2Cstart_time%2Ccover%7D&access_token=EAAEyl1RiMPcBAB40Bhwec9asj1hZAKWMzaDj8rP9k4lc5KNBZC2neNgixM008M4C5OzYVoZAtykLxMsz6jEkuMyD8Xsm4uYPLgctZCHKVrgFZCEPAi8Gaia5ZBjlpsBEHlOWqtjVMfw6hZBpZCoLV7MZBFPGK2oGEu83U6aXQFnlidNI3T24dZAu2IAmNBh7h32uj39ZAGTGWZAWI0BExdg5Cb1oVJOkDsBtwLAUmLQLcYHoHWpOmNAl6SW6')
         .then((re) => {
           this.results = re.data.data[0].events.data;
           console.log('a');
@@ -43,27 +43,27 @@ export default {
 
 #name{
   text-align: left;
-    width: 12%;
+    width: 100%;
 }
 
 #data {
 color: red;
-    margin-left: 40%;
+    margin: 0;
     font-weight: 700;
+    width: 40%;
     text-align: right;
-    width: 10%;
 }
-
 
 
  table{
  position: relative;
     left: 0;
-    top: 10px;
+    top: 30px;
     padding: 0;
     border-bottom: 1px solid #fff;
     border-radius: 0 0 12px 12px;
     width: 100%;
+     text-align: center;
    
 }
 
