@@ -31,7 +31,7 @@ export default {
   },
   computed: {                                                      
     List: function() {                                    
-      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events%7Bname%2Cstart_time%2Ccover%7D&access_token=EAAEyl1RiMPcBAB40Bhwec9asj1hZAKWMzaDj8rP9k4lc5KNBZC2neNgixM008M4C5OzYVoZAtykLxMsz6jEkuMyD8Xsm4uYPLgctZCHKVrgFZCEPAi8Gaia5ZBjlpsBEHlOWqtjVMfw6hZBpZCoLV7MZBFPGK2oGEu83U6aXQFnlidNI3T24dZAu2IAmNBh7h32uj39ZAGTGWZAWI0BExdg5Cb1oVJOkDsBtwLAUmLQLcYHoHWpOmNAl6SW6')
+      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events%7Bname%2Cstart_time%2Ccover%7D&access_token=EAAEyl1RiMPcBAHmj04JEl28kCjA4Rr0liUV66S16YFDZCZBQ6Wm0VEDx9difL7dZB1EpzpCjHw1pFqApMryqABF9XxvhpNCu2jlQgSauASWmLe57dfPF2V9gc8EJ5jjKKyt4E0NRVwbOSJKEL4IFysVcKghsprROVOB1GosJ7RljVZAPT6np')
         .then((re) => {
           this.results = re.data.data[0].events.data;
           }) 
